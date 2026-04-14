@@ -1,9 +1,14 @@
 package ar.edu.unahur.obj2.w2j;
 
-public class Documental{
-    private Contenido costoBase;
-    private IDRA canonIDRA;
-    public Double calcularCostoBase() {
-        return costoBase + canonIDRA;
+public class Documental extends Contenido{
+    public Documental(String titulo, Double costoBase) {
+        super(titulo, costoBase);
+
     }
+
+    @Override
+    public Double calcularCostoLiscencia() {
+        return IDRA.mostrarInstance().mostrarValor();
+    }
+
 }
