@@ -1,4 +1,4 @@
-package ar.edu.unahur.obj2.w2j.Contenido;
+package ar.edu.unahur.obj2.w2j.contenido;
 
 import java.util.ArrayList;
 import java.util.List;

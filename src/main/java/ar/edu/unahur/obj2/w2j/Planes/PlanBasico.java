@@ -1,5 +1,10 @@
 package ar.edu.unahur.obj2.w2j.planes;
 
-public class PlanBasico {
-    
+import ar.edu.unahur.obj2.w2j.Usuario;
+import ar.edu.unahur.obj2.wtoj.contenido.Contenido;
+
+public class PlanBasico implements Plan{
+    private Integer limite;
+
+    public
 }
