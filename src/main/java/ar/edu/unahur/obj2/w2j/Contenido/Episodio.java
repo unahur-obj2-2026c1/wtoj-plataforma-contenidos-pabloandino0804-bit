@@ -19,11 +19,11 @@ public class Episodio {
         return numero;
     }
 
-    public Double getCosto() {
+    public Double costo() {
         return costo;
     }
 
-    public void setCosto(Double costo) {
+    public void cambiarCosto(Double costo) {
         this.costo = costo;
     }
 

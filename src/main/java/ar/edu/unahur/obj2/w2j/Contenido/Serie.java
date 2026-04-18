@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Serie extends Contenido {
-    private List<Temporada> temporadas = new ArrayList<>();
+    private List<Temporada> temporadas = new ArrayList<Temporada>();
 
     public Serie(String titulo, Double costoBase){
         super(titulo, costoBase);
@@ -20,7 +20,9 @@ public class Serie extends Contenido {
     }
 
     @Override
-    public Double calcularCostoLiscencia(){
-        return costoBase + temporadas.stream().mapToDouble(t -> t.costoTemporada()).average().orElse(0.0);
+    public Double getCostoLiscencia(){
+        Integer cantEpisodios = temporadas.stream().mapToInt(t -> t.cantEpisodios()).sum();
+        Double costoTotal = temporadas.stream().mapToDouble(t -> t.costoTotal()).sum();
+        return cantEpisodios + costoTotal;
     }
 }

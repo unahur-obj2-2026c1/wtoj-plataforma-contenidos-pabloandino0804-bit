@@ -13,7 +13,7 @@ public class Contenido{
         return titulo;
     }
 
-    public Double calcularCostoLiscencia(){
+    public Double getCostoLiscencia(){
         return costoBase;
     }
 }

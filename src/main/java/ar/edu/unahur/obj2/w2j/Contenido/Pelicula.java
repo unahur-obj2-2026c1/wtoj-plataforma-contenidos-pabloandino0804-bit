@@ -7,7 +7,7 @@ public class Pelicula extends Contenido{
     }
 
     @Override
-    public Double calcularCostoLiscencia() {
+    public Double getCostoLiscencia() {
         return 0.0;
     }
 

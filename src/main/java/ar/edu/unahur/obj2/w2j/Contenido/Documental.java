@@ -7,7 +7,7 @@ public class Documental extends Contenido{
     }
 
     @Override
-    public Double calcularCostoLiscencia() {
+    public Double getCostoLiscencia() {
         return IDRA.mostrarInstance().mostrarValor();
     }
 

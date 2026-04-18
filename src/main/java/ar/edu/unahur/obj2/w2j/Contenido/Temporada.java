@@ -20,11 +20,23 @@ public class Temporada {
         episodios.add(episodio);
     }
 
-    public Integer numeroTemp(){
+    public Integer getNumeroTemp(){
         return numTemp;
     }
 
-    public Double costoTemporada(){
-        return episodios.stream().mapToDouble(e -> e.getCosto()).average().orElse(0.0);
+    public List<Episodio> getEpisodios(){
+        return episodios;
+    }
+
+    public Double costoPromedio(){
+        return episodios.stream().mapToDouble(e -> e.costo()).average().orElse(0.0);
+    }
+
+    public Double costoTotal(){
+        return episodios.stream().mapToDouble(e -> e.costo()).sum();
+    }
+
+    public Integer cantEpisodios(){
+        return episodios.size();
     }
 }
