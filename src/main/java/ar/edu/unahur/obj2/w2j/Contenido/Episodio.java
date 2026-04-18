@@ -1,4 +1,4 @@
-package ar.edu.unahur.obj2.w2j;
+package ar.edu.unahur.obj2.w2j.Contenido;
 
 public class Episodio {
     private final String titulo;
