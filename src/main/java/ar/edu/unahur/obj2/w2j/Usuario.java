@@ -3,11 +3,12 @@ package ar.edu.unahur.obj2.w2j;
 import java.util.ArrayList;
 import java.util.List;
 
-import ar.edu.unahur.obj2.w2j.planes.PlanPremiun;
+
+import ar.edu.unahur.obj2.w2j.planes.PlanPremium;
 import ar.edu.unahur.obj2.w2j.planes.Plan;
 
 public class Usuario {
-    private Plan plan = new PlanPremiun(12.0);
+    private Plan plan = new PlanPremium(12.0);
     private List<Contenido> contenidos = new ArrayList<>();
 
     public void verContenido(Contenido contenido) {
