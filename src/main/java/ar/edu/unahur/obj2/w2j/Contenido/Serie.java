@@ -3,6 +3,8 @@ package ar.edu.unahur.obj2.w2j.contenido;
 import java.util.ArrayList;
 import java.util.List;
 
+import ar.edu.unahur.obj2.w2j.Contenido;
+
 public class Serie extends Contenido {
     private List<Temporada> temporadas = new ArrayList<Temporada>();
 
@@ -23,6 +25,6 @@ public class Serie extends Contenido {
     public Double getCostoLiscencia(){
         Integer cantEpisodios = temporadas.stream().mapToInt(t -> t.cantEpisodios()).sum();
         Double costoTotal = temporadas.stream().mapToDouble(t -> t.costoTotal()).sum();
-        return cantEpisodios + costoTotal;
+        return costoBase + (cantEpisodios / costoTotal);
     }
 }

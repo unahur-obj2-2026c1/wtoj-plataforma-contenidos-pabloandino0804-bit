@@ -1,4 +1,4 @@
-package ar.edu.unahur.obj2.w2j.contenido;
+package ar.edu.unahur.obj2.w2j;
 
 public class Contenido{
     protected String titulo;
