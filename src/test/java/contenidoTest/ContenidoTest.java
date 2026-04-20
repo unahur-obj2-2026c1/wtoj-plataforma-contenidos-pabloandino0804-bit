@@ -16,7 +16,7 @@ public class ContenidoTest {
      @Test
     void dadoUnDocumental_seCalculaElCosto() {
         Contenido docu = new Documental("docu1", 10.0);
-        assertEquals(10.5, docu.getCostoLiscencia());
+        assertEquals(10.5, docu.doCosto());
 
     }
 
@@ -37,7 +37,7 @@ public class ContenidoTest {
         Contenido serie = new Serie("lost", 10.0,
                 Arrays.asList(t1, t2));
 
-        assertEquals(45.0, serie.getCostoLiscencia());
+        assertEquals(45.0, serie.doCosto());
 
     }
 }

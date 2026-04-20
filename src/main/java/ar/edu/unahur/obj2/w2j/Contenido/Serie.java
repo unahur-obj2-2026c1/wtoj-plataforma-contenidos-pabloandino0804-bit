@@ -20,9 +20,9 @@ public class Serie extends Contenido {
     }
 
     @Override
-    public Double getCostoLiscencia(){
+    public Double doCosto(){
         Integer cantEpisodios = temporadas.stream().mapToInt(t -> t.cantEpisodios()).sum();
-        Double costoTotal = temporadas.stream().mapToDouble(t -> t.costoTotal()).sum();
+        Double costoTotal = temporadas.stream().mapToDouble(t -> t.costoPromedio()).sum();
         return costoBase + (cantEpisodios / costoTotal);
     }
 }
