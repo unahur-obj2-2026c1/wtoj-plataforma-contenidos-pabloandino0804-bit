@@ -2,7 +2,7 @@ package ar.edu.unahur.obj2.w2j.planes;
 
 import java.util.List;
 
-import ar.edu.unahur.obj2.w2j.Contenido;
+import ar.edu.unahur.obj2.w2j.contenido.Contenido;
 import ar.edu.unahur.obj2.w2j.Usuario;
 
 public class PlanBasico implements Plan{

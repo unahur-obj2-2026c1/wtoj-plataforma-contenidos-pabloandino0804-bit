@@ -3,7 +3,7 @@ package ar.edu.unahur.obj2.w2j;
 import java.util.ArrayList;
 import java.util.List;
 
-
+import ar.edu.unahur.obj2.w2j.contenido.Contenido;
 import ar.edu.unahur.obj2.w2j.planes.PlanPremium;
 import ar.edu.unahur.obj2.w2j.planes.Plan;
 

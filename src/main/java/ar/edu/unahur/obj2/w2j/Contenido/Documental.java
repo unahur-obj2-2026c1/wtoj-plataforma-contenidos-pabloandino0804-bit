@@ -1,7 +1,5 @@
 package ar.edu.unahur.obj2.w2j.contenido;
 
-import ar.edu.unahur.obj2.w2j.Contenido;
-
 public class Documental extends Contenido{
     public Documental(String titulo, Double costoBase) {
         super(titulo, costoBase);
@@ -9,7 +7,7 @@ public class Documental extends Contenido{
     }
 
     @Override
-    public Double getCostoLiscencia() {
+    public Double doCosto() {
         return IDRA.mostrarInstance().mostrarValor();
     }
 

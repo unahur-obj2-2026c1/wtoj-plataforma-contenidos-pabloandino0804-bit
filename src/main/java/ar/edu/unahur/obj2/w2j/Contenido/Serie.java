@@ -3,8 +3,6 @@ package ar.edu.unahur.obj2.w2j.contenido;
 import java.util.ArrayList;
 import java.util.List;
 
-import ar.edu.unahur.obj2.w2j.Contenido;
-
 public class Serie extends Contenido {
     private List<Temporada> temporadas = new ArrayList<Temporada>();
 
