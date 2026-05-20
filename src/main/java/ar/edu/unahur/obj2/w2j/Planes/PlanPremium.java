@@ -13,4 +13,9 @@ public class PlanPremium implements Plan{
     public Double costoPlan(Usuario usuario) {
         return costoPlan;
     }
+
+    @Override
+    public void actualizarCostoPlan(Double nuevoValor) {
+        this.costoPlan = nuevoValor;
+    }
 }

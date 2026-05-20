@@ -4,4 +4,5 @@ import ar.edu.unahur.obj2.w2j.Usuario;
 
 public interface Plan {
     Double costoPlan(Usuario usuario);
+    void actualizarCostoPlan(Double nuevoValor);
 }

@@ -4,12 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ar.edu.unahur.obj2.w2j.contenido.Contenido;
-import ar.edu.unahur.obj2.w2j.planes.PlanPremium;
 import ar.edu.unahur.obj2.w2j.planes.Plan;
 
 public class Usuario {
-    private Plan plan = new PlanPremium(12.0);
+    private Plan plan;
     private List<Contenido> contenidos = new ArrayList<>();
+
+    public Usuario(Plan plan) {
+        this.plan = plan;
+    }
 
     public void verContenido(Contenido contenido) {
         contenidos.add(contenido);
@@ -28,7 +31,7 @@ public class Usuario {
     }
 
     public List<Contenido> getContendios() {
-        return new ArrayList<>(contenidos);
+        return this.contenidos;
     }
 
     public void limpiarContenidos() {

@@ -4,14 +4,16 @@ public class IDRA {
     private static IDRA instance = new IDRA();
     private Double IDRAvalor = 0.5;
 
-    private IDRA() {
-    }
 
-    public static IDRA mostrarInstance() {
+    public static IDRA getInstance() {
         return instance;
     }
 
-    public Double mostrarValor(){
+    public Double getValor() {
         return IDRAvalor;
+    }
+
+    public void setValor(Double valor) {
+        this.IDRAvalor = valor;
     }
 }

@@ -3,15 +3,14 @@ package ar.edu.unahur.obj2.w2j;
 import java.util.ArrayList;
 import java.util.List;
 
+import ar.edu.unahur.obj2.w2j.planes.Plan;
+
 public class Plataforma {
     private static Plataforma instance = new Plataforma();
 
-    private Plataforma() {
-    };
-
     private List<Usuario> usuarios = new ArrayList<>();
 
-    public static Plataforma getIntance() {
+    public static Plataforma getInstance() {
         return instance;
     }
 
@@ -25,5 +24,9 @@ public class Plataforma {
 
     public void agregarUsuario(Usuario usuario) {
         usuarios.add(usuario);
+    }
+
+    public void actualizarCostoPlan(Plan plan, Double valor) {
+        plan.actualizarCostoPlan(valor);
     }
 }

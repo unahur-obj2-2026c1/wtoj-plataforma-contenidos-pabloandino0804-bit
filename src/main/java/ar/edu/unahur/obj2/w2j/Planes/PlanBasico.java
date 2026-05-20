@@ -2,11 +2,12 @@ package ar.edu.unahur.obj2.w2j.planes;
 
 import java.util.List;
 
-import ar.edu.unahur.obj2.w2j.contenido.Contenido;
 import ar.edu.unahur.obj2.w2j.Usuario;
+import ar.edu.unahur.obj2.w2j.contenido.Contenido;
 
-public class PlanBasico implements Plan{
+public class PlanBasico implements Plan {
     private Integer limite;
+    private static Double costoBase = 5.0;
 
     public PlanBasico(Integer limite) {
         this.limite = limite;
@@ -14,15 +15,25 @@ public class PlanBasico implements Plan{
 
     @Override
     public Double costoPlan(Usuario usuario) {
-        Double costoBase = 5.0;
         List<Contenido> contenidos = usuario.getContendios();
-
-        if (limite >= contenidos.size()) {
-            return costoBase;
-        } else {
-            List<Contenido> excedentes = contenidos.subList(limite, contenidos.size());
-            return costoBase + excedentes.stream().mapToDouble(c -> c.getCostoLiscencia()).sum();
-        }
+        Double costoExcedentes = contenidos.stream().skip(limite).mapToDouble(c -> c.getCostoLiscencia()).sum();
+        return ajusteTotal(costoBase + costoExcedentes);
     }
 
+    public static Double getCostoBase() {
+        return costoBase;
+    }
+
+    public static void setCostoBase(Double costoNuevo) {
+        costoBase = costoNuevo;
+    }
+    
+    protected Double ajusteTotal(Double total) {
+        return total;
+    }
+
+    @Override
+    public void actualizarCostoPlan(Double nuevoValor) {
+        costoBase = nuevoValor;
+    }
 }

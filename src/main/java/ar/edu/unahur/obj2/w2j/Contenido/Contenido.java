@@ -1,6 +1,6 @@
 package ar.edu.unahur.obj2.w2j.contenido;
 
-public abstract class Contenido{
+public abstract class Contenido {
     protected String titulo;
     protected Double costoBase;
 
@@ -17,14 +17,15 @@ public abstract class Contenido{
         this.titulo = titulo;
     }
 
-    public Double getCostoLiscencia(){
+    public Double getCostoLiscencia() {
         return costoBase;
     }
+    
     public void setCostoBase(Double costoBase) {
         this.costoBase = costoBase;
     }
 
-    public Double costo() {
+    public Double getCosto() {
         return costoBase + this.doCosto();
     }
 
