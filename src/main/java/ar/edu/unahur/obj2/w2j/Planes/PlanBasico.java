@@ -34,6 +34,6 @@ public class PlanBasico implements Plan {
 
     @Override
     public void actualizarCostoPlan(Double nuevoValor) {
-        costoBase = nuevoValor;
+        PlanBasico.costoBase = nuevoValor;
     }
 }

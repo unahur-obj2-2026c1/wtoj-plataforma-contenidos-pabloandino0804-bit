@@ -1,14 +1,16 @@
 package TestsDeContenido.usuarios;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+
 
 import org.junit.jupiter.api.Test;
 
 import ar.edu.unahur.obj2.w2j.Usuario;
 import ar.edu.unahur.obj2.w2j.contenido.Pelicula;
+import ar.edu.unahur.obj2.w2j.planes.Plan;
 import ar.edu.unahur.obj2.w2j.planes.PlanBasico;
 import ar.edu.unahur.obj2.w2j.planes.PlanFamiliar;
+import ar.edu.unahur.obj2.w2j.planes.PlanPremium;
 
 public class UsuarioTest {
 
@@ -27,15 +29,25 @@ public class UsuarioTest {
     void dadoUnUsuario_cuandoElUsuarioCambiaDePlanBasicoAFamiliar_ElPlanActualSeraFamiliar() {
         Usuario usuario = new Usuario(new PlanBasico(2));
 
-        usuario.setPlan(new PlanFamiliar(2));
+        PlanFamiliar familiar = new PlanFamiliar(2);
+
+        usuario.setPlan(familiar);
 
         assertEquals(usuario.costoMensual(), 4.25);
-        assertEquals(usuario.getPlan(), usuario.getPlan());
+        assertEquals(usuario.getPlan(), familiar);
+        assertEquals(familiar.getDescuento(), 0.15);
     }
 
     @Test
-    void testName2() {
-        assertTrue(true);
+    void dadoUnUsuario_cuandoElUsuarioCambiaDePlanBasicoAPremium_ElPlanActualSeraFamiliar() {
+        Usuario usuario = new Usuario(new PlanBasico(2));
+
+        Plan premium = new PlanPremium(50.0);
+
+        usuario.setPlan(premium);
+
+        assertEquals(usuario.costoMensual(), 50.0);
+        assertEquals(usuario.getPlan(), premium);
     }
     
 }
