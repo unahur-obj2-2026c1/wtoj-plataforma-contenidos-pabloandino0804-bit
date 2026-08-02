@@ -1,4 +1,4 @@
-package ar.edu.unahur.obj2.w2j;
+package ar.edu.unahur.obj2.w2j.usuarios;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,4 +38,3 @@ public class Usuario {
         contenidos.clear();
     }
 }
-

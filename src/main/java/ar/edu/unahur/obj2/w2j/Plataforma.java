@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ar.edu.unahur.obj2.w2j.planes.Plan;
+import ar.edu.unahur.obj2.w2j.usuarios.Usuario;
 
 public class Plataforma {
     private static Plataforma instance = new Plataforma();

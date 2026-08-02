@@ -2,7 +2,7 @@ package ar.edu.unahur.obj2.w2j.planes;
 
 import java.util.List;
 
-import ar.edu.unahur.obj2.w2j.Usuario;
+import ar.edu.unahur.obj2.w2j.usuarios.Usuario;
 import ar.edu.unahur.obj2.w2j.contenido.Contenido;
 
 public class PlanBasico implements Plan {
@@ -27,7 +27,7 @@ public class PlanBasico implements Plan {
     public static void setCostoBase(Double costoNuevo) {
         costoBase = costoNuevo;
     }
-    
+
     protected Double ajusteTotal(Double total) {
         return total;
     }

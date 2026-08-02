@@ -2,11 +2,10 @@ package TestsDeContenido;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-
 import org.junit.jupiter.api.Test;
 
 import ar.edu.unahur.obj2.w2j.Plataforma;
-import ar.edu.unahur.obj2.w2j.Usuario;
+import ar.edu.unahur.obj2.w2j.usuarios.Usuario;
 import ar.edu.unahur.obj2.w2j.contenido.Pelicula;
 import ar.edu.unahur.obj2.w2j.planes.Plan;
 import ar.edu.unahur.obj2.w2j.planes.PlanBasico;
@@ -41,7 +40,7 @@ public class PlataformaTest {
         plataforma.agregarUsuario(u2);
 
         plataforma.limpiarContenidos();
-        
+
         assertEquals(0, u1.getContendios().size());
         assertEquals(0, u2.getContendios().size());
     }
@@ -54,7 +53,6 @@ public class PlataformaTest {
         Plan planPremium = new PlanPremium(40.5);
 
         Usuario usuarioBasico = new Usuario(planBasico);
-
 
         plataforma.actualizarCostoPlan(planBasico, 11.6);
         plataforma.actualizarCostoPlan(planFamiliar, 8.3);

@@ -2,15 +2,14 @@ package TestsDeContenido.usuarios;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-
 import org.junit.jupiter.api.Test;
 
-import ar.edu.unahur.obj2.w2j.Usuario;
 import ar.edu.unahur.obj2.w2j.contenido.Pelicula;
 import ar.edu.unahur.obj2.w2j.planes.Plan;
 import ar.edu.unahur.obj2.w2j.planes.PlanBasico;
 import ar.edu.unahur.obj2.w2j.planes.PlanFamiliar;
 import ar.edu.unahur.obj2.w2j.planes.PlanPremium;
+import ar.edu.unahur.obj2.w2j.usuarios.Usuario;
 
 public class UsuarioTest {
 
@@ -49,5 +48,5 @@ public class UsuarioTest {
         assertEquals(usuario.costoMensual(), 50.0);
         assertEquals(usuario.getPlan(), premium);
     }
-    
+
 }

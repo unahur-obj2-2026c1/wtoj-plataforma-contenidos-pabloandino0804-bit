@@ -1,8 +1,8 @@
 package ar.edu.unahur.obj2.w2j.planes;
 
-import ar.edu.unahur.obj2.w2j.Usuario;
+import ar.edu.unahur.obj2.w2j.usuarios.Usuario;
 
-public class PlanPremium implements Plan{
+public class PlanPremium implements Plan {
     private Double costoPlan;
 
     public PlanPremium(Double costoPlan) {
